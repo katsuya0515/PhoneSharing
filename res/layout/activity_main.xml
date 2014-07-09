@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.myfirstlauncher.MainActivity" >
+
+    <!---  
+    <SlidingDrawer
+        android:id="@+id/drawer" 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:handle="@+id/handle"
+        android:content="@+id/content">
+        <ImageView
+            android:id="@+id/handle"
+            android:background="@drawable/up_arrow"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>   
+         -->
+        
+   <!---   </SlidingDrawer> -->
+    
+        <ImageView
+            android:id="@+id/bgimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/boston" />
+
+ <LinearLayout
+     android:id="@+id/linear"
+      android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal" >
+
+     <SurfaceView
+         android:id="@+id/surfaceView1"
+         android:layout_width="50dp"
+         android:layout_height="50dp"
+       />
+     
+     <ImageView
+         android:id="@+id/checkimage"
+         android:layout_width="50dp"
+         android:layout_height="50dp"
+         android:background="@color/Black_transparent" />
+
+     <ImageView
+         android:id="@+id/swipe"
+       android:layout_width="fill_parent"
+       android:layout_height="50dp"
+         android:layout_weight="1"/>
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Detected Name"
+         android:textColor="#ffffff" />
+
+ </LinearLayout>
+
+        <GridView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="30dp" >
+
+        </GridView>
+
+     
+       
+       
+</RelativeLayout>
